@@ -1,0 +1,1014 @@
+<!DOCTYPE html>
+<html id="home">
+
+
+<head>
+    <!-- Metadata and Style Sheets -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="styles.css">
+   
+    <!-- Meta Tags -->
+    <title>Home Page</title>
+    <meta name="title" content="Scott Fischer">
+    <meta name="author" content="Scott Fischer">
+    <meta name="description" content="Scott's Personal Website">
+    <link rel="canonical" href="https://tbd.com/">
+</head>
+
+<body>
+
+<header>
+    <div>
+        <h1>Scott Fischer</h1>
+        <small>Cazenovia, NY</small>
+    </div>
+
+    <!-- Navigation -->
+    <nav role="navigation">
+        <div class="svg-container">
+            <svg width="100" height="150" viewBox="0 0 78 110" style="overflow: visible">
+                <def>
+                    <path id="hex-nav" d="M32.25,0,43,17,32.25,34H10.75L0,17,10.75,0Z"/>
+                </def>
+
+                <g class="hexagon" id="homepage" onclick="toggleVisibility('home-content')">
+                    <use href="#hex-nav"/>
+                    <text id="Home" class=hex-nav-text transform="translate(10.5 19.5)">
+                        Home
+                    </text>
+                </g>
+
+                <g class="hexagon" id="art" transform="translate(0 38)" onclick="toggleVisibility('art-content')">
+                    <use href="#hex-nav"/>
+                    <text id="Art" class=hex-nav-text  transform="translate(13 19.5)">
+                        Art
+                    </text>
+                </g>
+                
+                <g class="hexagon" id="skills" transform="translate(35 19)" onclick="toggleVisibility('skill-content')">
+                    <use href="#hex-nav"/>
+                    <text id="Skill" class=hex-nav-text transform="translate(8.5 20.5)">
+                        Skill
+                    </text>
+                </g>
+
+                <g class="hexagon" id="tbd" transform="translate(35 57)" onclick="toggleVisibility('tbd-content')">
+                    <use href="#hex-nav"/>
+                    <text id="TBD" class=hex-nav-text transform="translate(13 20.5)">
+                        TBD
+                    </text>
+                </g>
+                <g class="hexagon" id="info" transform="translate(0 76)" onclick="toggleVisibility('info-content')">
+                    <use href="#hex-nav"/>
+                    <text class=hex-nav-text id="Info" transform="translate(11 20.5)">
+                        Info
+                    </text>
+                </g>
+            </svg>
+        </div>
+    </nav>
+
+</header>
+
+<main>
+    <section id="home-content" class="hidden-home">
+          
+        <h3>
+            Hello Friend
+        </h3>
+        <p>
+        Welcome to my personal site! Here you can learn more about me, my skills and interests.
+        </p>
+
+    </section>
+    <section id="info-content" class="hidden">
+        <section>
+            <h3>Info</h3>
+            <p> 
+                I'm an artist and materials specialist with prior experience exhibiting professionally and working in higher education. 
+                For the last five years I have dedicated myself to fine-art materials research and testing while maintaining a close connection to education. 
+                Being a curious person at heart, I am a problem solver who likes to understand how all manner of things work.
+                This has led to many rabbit holes with recent interests in project management, programming, web development, and emerging technologies.   
+            </p>
+            <p>
+                Below is a catalogue of experiences, both professional and personal that are, perhaps, more quantifiable measures of my activities and interests. 
+                For a one-pager, here is a link to my 
+                <a href="index.html">
+                    <em class="highlight">Resume.</em>
+                </a>
+            </p>
+        </section>
+        <section id="cv">
+            <details>
+                <summary>
+                    Work Experience                
+                </summary>
+                <br>
+                <div class="split">
+                    <div class="label">2021-Now</div>
+                    <div>
+                        <h3>Research Coordinator</h3>
+                        <small>New Berlin, NY &amp; Remote</small>
+                        <p>Lead product testing research and knowledge management initiatives. Build and maintain a comprehensive library of technical documentation and SOPs to drive integrity, quality assurance, and efficiency.</p>
+                        <p>Direct and manage product tests for new product development, reformulations, and customer support projects. Develop new methods and procedures for project workflow management, cross-functional team communication, and reporting.</p>
+                        <details>
+                            <summary>
+                                Projects
+                            </summary>
+                            <ul>
+                                <li>Developed and implemented standardized testing procedures and documentation templates to streamline product testing workflow and reporting</li>
+                                <li>Managed testing for new product launches including product compatibility, performance standards, and applications</li>
+                                <li>Led cross-functional team projects to evaluate new raw material sources and test reformulations of existing products</li>
+                                <li>Built and maintain a searchable knowledge base of past projects, formulations, and technical documentation</li>
+                                <li>Oversaw testing during reformulation of entired product catalogue to ensure consistency with existing formulations and performance standards</li>
+                        </details>
+                    </div>
+                </div>   
+                <div class="split">
+                    <div class="label">2018-Now</div>
+                    <div>
+                        <h3>Materials and Applications Specialist</h3>
+                        <small>New Berlin, NY &amp; Remote</small>
+                        <p>Member of a team of artists tasked with “breaking” products before they go to market by anticipating applications an artist might use in their studio.</p>
+                    </div>
+                </div>
+                <div class="split">
+                    <div class="label">2015-2018</div>
+                    <div>
+                        <h3>Adjunct Instructor</h3>
+                        <small>Cleveland, OH</small>
+                        <p>Developed course curriculum, taught and advised students in design, drawing, anatomy, color theory and materials.</p>
+                    </div>
+                </div>
+                <div class="split">
+                    <div class="label">2012–2015</div>
+                    <div>
+                        <h3>Instructor of Record</h3>
+                        <small>Manhattan, KS</small>
+                        <p>Developed course curriculum, taught and advised students in design, drawing, anatomy, color theory and materials.</p>
+                    </div>
+                </div>
+            </details>
+            <details>
+                <summary>
+                    Certifications
+                </summary>
+                <br>
+                <div class="split">
+                    <div class="label">2023</div>
+                    <div>
+                        <h3>Programming for Everybody (Python)</h3>
+                        <small>University of Michigan | Coursera</small>
+                        <ul class="listsize">
+                            <li>
+                                <a href="https://www.coursera.org/account/accomplishments/certificate/9BM3CMUQUG25">Getting Started with Python</a>
+                            </li>
+                            <li>
+                                <a href="https://www.coursera.org/account/accomplishments/certificate/LF94AB55F7EQ">Python Data Structures</a> 
+                            </li>
+                            <li>
+                                <a href="https://www.coursera.org/account/accomplishments/certificate/WLGS7SUT89SS">Using Python to Access Web Data</a>
+                            </li>
+                            <li>
+                                <a href="https://coursera.org/share/faf1ea5a91c6b2b7a58229fbd0a874b1">Using Databases with Python</a>
+                            </li>
+                        </ul>
+                        <br>
+                        <h3>UX Design Professional</h3>
+                        <small>Google | Coursera</small>
+                        <ul class="listsize">
+                            <li>
+                                <a href="https://www.coursera.org/account/accomplishments/certificate/MN4Y362BFMX8">Foundations of User Experience Design (UX)</a>
+                            </li>
+                            <li>
+                                <a href="https://www.coursera.org/account/accomplishments/certificate/BSFFT96VYLYB">Start the UX Design Process: Empathize, Define, Ideate</a> 
+                            </li>
+                            <li>
+                                <a href="https://www.coursera.org/account/accomplishments/certificate/PYCU7KU4F9PD">Build Wireframes and Lo-Fidelity Prototypes</a>
+                            </li>
+                        </ul>
+                        <br>
+                        <h3>Project Management</h3>
+                        <small>Google | Coursera</small>
+                        <ul class="listsize">
+                            <li>
+                                <a href="https://www.coursera.org/account/accomplishments/certificate/MS4B5FNC8Z8N">Agile Project Management</a>
+                        </ul>
+                        <br>
+                    </div>
+                </div>
+                <div class="split">
+                    <div class="label">2022</div>
+                    <div>
+                        <h3>Project Management | CProjMgrSU</h3>
+                        <small>Syracuse University</small>
+                    </div>
+                </div><br>
+            </details>
+            <details>
+                <summary>
+                    Education
+                </summary>
+                <br>
+                <div class="split">
+                    <div class="label">2015</div>
+                    <div>
+                        <h3>Master of Fine-Art</h3>
+                        <small>Kansas State University, Manhattan, KS</small>
+                        <small>Painting, Printmaking</small>
+    
+                    </div>
+                </div>
+                <div class="split">
+                    <div class="label">2010-12</div>
+                    <div>
+                        <h3>Continuing Education</h3>
+                        <small>Cuyahoga Community College, Cleveland, OH</small>
+                        <small>Anatomy, Biology, Health Sciences</small>
+                    </div>
+                </div>
+                <div class="split">
+                    <div class="label">2006</div>
+                    <div>
+                        <h3>Bachelor of Fine-Art</h3>
+                        <small>Edinboro University of PA, Edinboro, PA</small>
+                        <small>Painting, Printmaking</small>
+                    </div>
+                </div><br>
+            </details>
+            <details>
+                <summary>
+                    Exhibitions
+                </summary><br>
+                <h3>One-Person</h3><br>
+                <div class="split">
+                    <div class="label">2015</div>
+                    <div>
+                        <h3>Obervations in Color</h3>
+                        <small>Gelbke Art Gallery, Hiram College</small>
+                        <br>
+                        <h3>Eggs Over Medium</h3>
+                        <small>Mark A Chapman Gallery, Kansas State University</small>
+                    </div><br>
+                </div>  
+                <h3>International</h3><br>
+                <div class="split">
+                    <div class="label">2014</div>
+                    <div>
+                        <h3>Madonna International Print Exchange</h3>
+                        <small>Traveling Exhibition, organized by Teresa Parker</small>
+                        <ul class="listsize">
+                            <li>
+                                O.S.B. Art Gallery, Benedictine University, IL
+                            </li>
+                            <li>
+                                Brannigan Cultural Center, Las Cruces, NM
+                            </li>
+                        </ul>
+                    </div><br>
+                </div> 
+                <h3>Group and Juried</h3><br>
+                <div class="split">
+                    <div class="label">2020</div>
+                    <div>
+                        <h3>The Children's Crusade</h3>
+                        <small>Traveling Exhibition, organized by Jolynn Reigeluth</small>
+                        <small>Affiliated with the Kurt Vonnegut Museum and Library</small>
+                        <ul class="listsize">
+                            <li>
+                                Books & Brews, Indianapolis, IN
+                            </li>
+                            <li>
+                                Calvin Fletcher Coffee Company, IN
+                            </li>
+                            <li>
+                                Golden Stag Gallery, Kansas City, MO
+                            </li>
+                            <li>
+                                Hub at College for Creative Studies, Detriot, MI
+                            </li>
+                            <li>
+                                Print Space Gallery, Wichita State University, KS
+                            </li>
+                            <li>
+                                Wonsook Kim Center for Visual Art, Gallery 129, Illinois State University, Normal, IL
+                            </li>
+                            <li>
+                                The Kurt Vonnegut Museum and Library, Indianapolis, IL
+                            </li>
+                            <li>
+                                Print Space Gallery, Wichita State University
+                            </li>
+                        </ul>
+                        <br>
+                    </div>
+                    <div class="label">2018</div>
+                    <div>
+                        <h3>Surface Tension</h3>
+                        <small>Cazenovia College, Cazenovia, NY</small>
+                        <br>
+                    </div>
+                    <div class="label">2017</div>
+                    <div>
+                        <h3>Winter Show</h3>
+                        <small>The Art Store, Charleston, WV</small>
+                        <br>
+                        <h3>Annual Faculty Exhibition</h3>
+                        <small>Rheinberger Gallery, Cleveland Institute of Art, Cleveland, OH</small>
+                        <br>
+                        <h3>A Legacy of Observation</h3>
+                        <small>Jurors Terry Mckelvey and Thomas Paquette</small>
+                        <small>Crary Art Gallery, Warren, PA</small>
+                        <br>
+                        <h3>Studio Visit Magazine Vol. 37</h3>
+                        <small>Juror Diana Gaston (then Director of the Tamarind Institute)</small>
+                        <small>Open Studios Press, Boston, MA</small>
+                        <br>
+                        <h3>Geometrics</h3>
+                        <small>The Art Store, Charleston, WV</small>
+                        <br>
+                    </div>
+                    <div class="label">2016</div>
+                    <div>
+                        <h3>Annual Faculty Exhibition</h3>
+                        <small>Rheinberger Gallery, Cleveland Institute of Art, Cleveland, OH</small>
+                        <br>
+                        <h3>Butler Institute of American Art’s 80th Midyear National</h3>
+                        <small>Juror John Vanco Director of the Erie Art Museum</small>
+                        <small>Butler Institute of American Art, Youngstown, OH</small>
+                        <br>
+                    </div>
+                    <div class="label">2015</div>
+                    <div>
+                        <h3>35th Annual Faber Birren National Color Award Show</h3>
+                        <small>Juror Anna Swinbourne PhD Former Curator at MOMA</small>
+                        <small>Stamford Art Association, Stamford, CT</small>
+                        <br>
+                        <h3>First Street Gallery's 2015 National Juried Exhibition</h3>
+                        <small>Juror Steven Harvey of Steven Harvey Fine Art Projects</small>
+                        <small>First Street Gallery, New York, NY</small>
+                        <br>
+                    </div>
+                    <div class="label">2014</div>
+                    <div>
+                        <h3>Off the Grid</h3>
+                        <small>Juror Kat Griefen of the Accola Griefen Gallery in NYC</small>
+                        <small>Wefald Gallery, Beach Museum of Art Manhattan, KS</small>
+                        <br>
+                        <h3>Snacks</h3>
+                        <small>Manhattan Arts Center, Manhattan, KS</small>
+                        <br>
+                    </div>
+                </div>
+                <h3>Publications</h3><br>
+                <div class="split">
+                    <div class="label">2009</div>
+                    <div>
+                        <h3>The Underside of Orange</h3>
+                        <small>Potenza Music Label, Music by Brett Miller</small>
+                        <br>
+                        <h3>Messy Magazine, Issue 1</h3>
+                        <small>Online Cleveland Arts and Culture magazine</small>
+                    </div><br>
+                </div> 
+            </details>
+            <details>
+                <summary>
+                    Talks &amp; Workshops
+                </summary>
+                    <div>
+                        <br>
+                        <h3>Sam and Adele GOLDEN Foundation</h3>
+                        <small>8+ Annual Artist in Residence Groups 2018-23</small>
+                        <small>Materials Demonstration and Consultation</small>
+                        <br>
+                        <h3>Laguna College of Art and Design</h3>
+                        <small>Hosted by Matt Franz</small>
+                        <br>
+                        <h3>Yale University</h3>
+                        <small>Hosted by Meleko Mokgosi</small>
+                        <br>
+                        <h3>New York Studio School</h3>
+                        <small>Hosted by Graham Nickson</small>
+                        <br>
+                        <h3>Rhode Island School of Design</h3>
+                        <br>
+                        <h3>The Painting Center</h3>
+                        <br>
+                        <h3>School of the Art Institute of Chicago<h3>
+                        <br>
+                        <h3>Florida State University</h3>
+                        <small>Hosted by Carrie Ann Baade</small>
+                        <br>
+                        <h3>Edinboro University of PA</h3>
+                        <small>Hosted by Terry McKelvey</small>
+                        <br>
+                        <h3>Cleveland Institute of Art</h3>
+                        <small>Hosted by Anthony Ingrisano</small>
+                        <br>
+                    </div><br>
+                </div> 
+            </details>
+            <details>
+                <summary>
+                    Writing
+                </summary>
+                <br>
+                <div class="split">
+                    <div class="label">2023</div>
+                    <div>
+                        <a href="https://justpaint.org/recent-qor-lightfast-testing/">Recent QoR Lightfast Testing</a>
+                        <small>Golden Artist Colors | Just Paint</small>
+                        <br>
+                        <a href="https://justpaint.org/life-of-a-test/">Life of a Test</a>
+                        <small>Golden Artist Colors | Just Paint</small>
+                        <br>
+                    </div>
+                    <div class="label">2022</div>
+                    <div>
+                        <a href="https://justpaint.org/understanding-the-feel-of-acrylics/">Rheology: Understanding the Feel of Acrylics</a>
+                        <small>Golden Artist Colors | Just Paint</small>
+                        <br>
+                    </div>
+                    <div class="label">2021</div>
+                    <div>
+                        <a href="https://justpaint.org/meeting-a-ghost-a-sample-of-genuine-indian-yellow/">Meeting a Ghost: A Sample of Genuine Indian Yellow</a>
+                        <small>Golden Artist Colors | Just Paint</small>
+                        <br>
+                        <a href="https://justpaint.org/recent-lightfast-testing-of-heavy-body-fluorescent-colors/">Recent Lightfast Testing of Heavy Body Fluorescent Colors</a>
+                        <small>Golden Artist Colors | Just Paint</small>
+                        <br>
+                    </div>
+                    <div class="label">2020</div>
+                    <div>
+                        <a href="https://justpaint.org/acrylics-on-non-porous-substrates/">Acrylics on Non-Porous Substrates</a>
+                        <small>Golden Artist Colors | Just Paint</small>
+                        <br>
+                        <a href="https://justpaint.org/neutralizing-color/">Neutralizing Color</a>
+                        <small>Golden Artist Colors | Just Paint</small>
+                        <br>
+                        <a href="https://justpaint.org/make-your-own-stop-out-varnish-for-intaglio-printmaking-with-golden-acrylics/">Make Your Own Stop-Out Varnish</a>
+                        <small>Golden Artist Colors | Just Paint</small>
+                        <br>
+                    </div>
+                    <div class="label">2019</div>
+                    <div>
+                        <a href="https://justpaint.org/using-alcohol-inks-with-golden-acrylics-and-varnishes/">Using Alcohol Inks with Golden Acrylics and Varnishes</a>
+                        <small>Golden Artist Colors | Just Paint</small>
+                        <br>
+                        <a href="https://justpaint.org/testing-for-sensitivity/">Testing for Sensitivity</a>
+                        <small>Golden Artist Colors | Just Paint</small>
+                        <br>
+                        <a href="https://justpaint.org/surface-checking-and-plywood-is-it-a-concern/">Surface Checking and Plywood, is it a Concern?</a>
+                        <small>Golden Artist Colors | Just Paint</small>
+                        <br>
+                    </div>
+                    <div class="label">2018</div>
+                    <div>
+                        <a href="https://justpaint.org/medium-density-overlay/">Medium Density Overlay</a>
+                        <small>Golden Artist Colors | Just Paint</small>
+                        <br>
+                    </div>
+                </div>  
+            </details>
+        </section>
+    </section> 
+    <section id="skill-content" class="hidden">
+        <section id="all-skills">
+            <h3>Skills</h3>
+            <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio, beatae nam quas officia exercitationem delectus numquam illo nostrum ex natus dolorem temporibus voluptatibus nulla accusamus nisi quos atque nesciunt cupiditate.
+            </p>
+            <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat quia, aut in aperiam accusamus magnam facilis, dolorum expedita molestiae dolorem pariatur maiores nesciunt laudantium. Ut, saepe hic? Repellendus, molestiae sed.
+                <a href="index.html">
+                    <em>Some kinf of link</em>
+                </a>
+            </p>
+            <!-- <br> -->
+            <!-- <div id="key">
+                <small>Key</small>
+                <svg width="50%" height="50%" viewBox="0 -5 173 80">
+
+                    <def>
+                        <path id="hex-unit" d="M37.5,0,50,20,37.5,40h-25L0,20,12.5,0Z"/>
+                    </def>
+
+                    <g id="Hexagon-2" transform="translate(0 22)" class="skill-competent">
+                      <use href="#hex-unit"/>
+                      <text class="hex-skill-text">
+                          Proficient
+                      </text>
+                    </g>
+
+                    <g id="Hexagon" transform="translate(41)" class="skill-proficient">
+                      <use href="#hex-unit"/>
+                      <text class="hex-skill-text">
+                          Competent
+                      </text>
+                    </g>
+
+                    <g id="Hexagon-4" transform="translate(82 22)" class="skill-aspiration">
+                      <use href="#hex-unit"/>
+                      <text class="hex-skill-text">
+                          Novice
+                      </text>
+                    </g>
+
+                    <g id="Hexagon-3" transform="translate(123)" class="skill-novice">
+                      <use href="#hex-unit"/>
+                      <text class="hex-skill-text">
+                          Aspiration
+                      </text>
+                    </g>
+                  </svg>
+            </div> -->
+              
+        </section>
+
+        <section>          
+            <br>            
+            <section id="art-skill">
+                <div id="artDesign-tooltip">
+                    <span id="artDesign-tooltipSubject"></span>
+                    <span id="artDesign-tooltipDetails"></span>
+                </div>
+                <br>
+                <svg data-subject="Art &amp; Design" width="80%" height="80%" viewBox="0 -5 255 160">
+                    
+                    <def>
+                        <path id="hex-unit" d="M37.5,0,50,20,37.5,40h-25L0,20,12.5,0Z"/>
+                    </def>
+
+                    <g id="drawing" class="skill-proficient" data-progress="Proficient" data-name="Drawing">
+                        <use href="#hex-unit"/>
+                        <text id="Drawing" class="hex-skill-text">
+                            Drawing
+                        </text>
+                    </g>
+
+                    <g id="oil" transform="translate(0 44)" class="skill-proficient" data-progress="Proficient" data-name="Oil &amp; Acrylic Painting">
+                        <use href="#hex-unit"/>
+                        <text id="Oil_Painting" class="hex-skill-text">
+                            Painting
+                        </text>
+                    </g>
+
+                    <g id="Materials" transform="translate(0 88)" class="skill-proficient" data-progress="Proficient" data-name="Materials"
+                    ><use href="#hex-unit"/>
+                        <text id="Materials" class="hex-skill-text">
+                            Materials
+                        </text>
+                    </g>
+
+                    <g id="watercolor" transform="translate(41 22)" class="skill-proficient" data-progress="Proficent" data-name="Watercolor">
+                        <use href="#hex-unit"/>
+                        <text id="Watercolor" class="hex-skill-text">
+                            Watercolor
+                        </text>
+                    </g>
+
+                    <g id="art-main" transform="translate(41 66)" class="skill-main" data-progress="" data-name="Art Map">
+                        <use href="#hex-unit"/>
+                        <text id="Art" class="hex-skill-text">
+                            Art &amp; Design
+                        </text>
+                    </g>
+
+                    <g id="design" transform="translate(41 110)" class="skill-proficient" data-progress="Proficient" data-name="Design Theory">
+                        <use href="#hex-unit"/>
+                        <text id="Design_Theory" class="hex-skill-text">
+                            Design
+                        </text>
+                    </g>
+                    
+                    <g id="printmaking" transform="translate(82)" class="skill-competent" data-progress="Competent" data-name="Printmaking">
+                        <use href="#hex-unit"/>
+                        <text id="Printmaking" class="hex-skill-text">
+                            Printmaking
+                        </text>
+                    </g>
+
+                    <g id="digital" transform="translate(82 44)" class="skill-competent" data-progress="Competent" data-name="Digital Painting">
+                        <use href="#hex-unit"/>
+                        <text id="Digital_Painting" class="hex-skill-text">
+                            Digital
+                        </text>
+                    </g>
+
+                    <g id="color" transform="translate(82 88)" class="skill-proficient" data-progress="Proficient" data-name="Color Theory">
+                        <use href="#hex-unit"/>
+                        <text id="Color" class="hex-skill-text">
+                            Color
+                        </text>
+                    </g>
+
+                    <g id="anatomy" transform="translate(123 22)" class="skill-competent" data-progress="Competent" data-name="Anatomy">
+                        <use href="#hex-unit"/>
+                        <text id="Anatomy" class="hex-skill-text">
+                            Anatomy
+                        </text>
+                    </g>
+
+                    <g id="typo" transform="translate(123 66)" class="skill-novice" data-progress="Novice" data-name="Typography">
+                        <use href="#hex-unit"/>
+                        <text id="Typography" class="hex-skill-text">
+                            Typography
+                        </text>
+                    </g>
+
+                    <g id="sculpture" transform="translate(164)" class="skill-novice" data-progress="Novice" data-name="Sculpture">
+                        <use href="#hex-unit"/>
+                        <text id="Sculpture" class="hex-skill-text">
+                            Sculpture
+                        </text>
+                    </g>
+
+                    <g id="ink" transform="translate(164 44)" class="skill-novice" data-progress="Novice" data-name="Inking">
+                        <use href="#hex-unit"/>
+                        <text id="Ink" class="hex-skill-text">
+                            Ink
+                        </text>
+                    </g>
+
+                    <g id="ceramics" transform="translate(205 23)" class="skill-aspiration" data-progress="Aspiration" data-name="Ceramics">
+                        <use href="#hex-unit"/>
+                        <text id="Ceramics" class="hex-skill-text">
+                            Ceramics
+                        </text>
+                    </g>
+
+                    <g id="textiles" transform="translate(205 67)" class="skill-aspiration" data-progress="Aspiration" data-name="Textiles">
+                        <use href="#hex-unit"/>
+                        <text id="Textiles" class="hex-skill-text">
+                            Textiles
+                        </text>
+                    </g>
+                  </svg>
+            </section>
+            <section id="coding-skill">
+                <div id="coding-tooltip">
+                    <span id="coding-tooltipSubject"></span>
+                    <span id="coding-tooltipDetails"></span>
+                </div>
+                <br>
+                <svg data-subject="Coding" width="65%" height="65%" viewBox="0 -5 214 224">
+                   
+                    <def>
+                        <path id="hex-unit" d="M37.5,0,50,20,37.5,40h-25L0,20,12.5,0Z"/>
+                    </def>
+
+                    <g id="sql" transform="translate(0 66)" class="skill-novice" data-progress="novice" data-name="SQL">
+                        <use href="#hex-unit"/>
+                        <text id="SQL" class="hex-skill-text">
+                            SQL
+                        </text>
+                    </g>
+
+                    <g id="r" transform="translate(0 110)" class="skill-aspiration" data-progress="Aspiration" data-name="R">
+                        <use href="#hex-unit"/>
+                        <text id="R" class="hex-skill-text">
+                            R
+                        </text>
+                    </g>
+
+                    <g id="php" transform="translate(41)" class="skill-aspiration" data-progress="Aspiration" data-name="PHP">
+                        <use href="#hex-unit"/>
+                        <text id="PHP" class="hex-skill-text">
+                            PHP
+                        </text>
+                    </g>
+
+                    <g id="html" transform="translate(41 44)" class="skill-competent" data-progress="Competent" data-name="HTML">
+                        <use href="#hex-unit"/>
+                        <text id="HTML" class="hex-skill-text">
+                            HTML
+                        </text>
+                    </g>
+
+                    <g id="python" transform="translate(41 88)" class="skill-novice" data-progress="Novice" data-name="Python">
+                        <use href="#hex-unit"/>
+                        <text id="Python" class="hex-skill-text">
+                            Python
+                        </text>
+                    </g>
+
+                    <g id="mojo" transform="translate(41 132)" class="skill-aspiration" data-progress="Aspiration" data-name="Mojo">
+                        <use href="#hex-unit"/>
+                        <text id="Mojo" class="hex-skill-text">
+                            Mojo
+                        </text>
+                    </g>    
+
+                    <g id="css" transform="translate(82 22)" class="skill-competent" data-progress="Competent" data-name="CSS">
+                        <use href="#hex-unit"/>
+                        <text id="CSS" class="hex-skill-text">
+                            CSS
+                        </text>
+                    </g>
+
+                    <g id="coding" transform="translate(82 66)" class="skill-main" data-progress="" data-name="Coding Map">
+                        <use href="#hex-unit"/>
+                        <text id="Coding" class="hex-skill-text">
+                            Coding
+                        </text>
+                    </g>
+
+                    <g id="c" transform="translate(82 110)" class="skill-aspiration" data-progress="Aspiration" data-name="C">
+                        <use href="#hex-unit"/>
+                        <text id="C" class="hex-skill-text">
+                            C
+                        </text>
+                    </g>
+
+                    <g id="c#" transform="translate(82 154)" class="skill-aspiration" data-progress="Aspiration" data-name="C#">
+                        <use href="#hex-unit"/>
+                        <text id="C_" class="hex-skill-text">
+                            C#
+                        </text>
+                    </g>  
+
+                    <g id="js" transform="translate(123 44)" class="skill-novice" data-progress="Novice" data-name="JavaScript">
+                        <use href="#hex-unit"/>
+                        <text id="JavaScript" class="hex-skill-text">
+                            JavaScript
+                        </text>
+                    </g>
+
+                    <g id="c++" transform="translate(123 132)" class="skill-aspiration" data-progress="Aspiration" data-name="C++">
+                        <use href="#hex-unit"/>
+                        <text id="C_" data-name="C++" class="hex-skill-text">
+                            C++
+                        </text>
+                    </g>
+
+                    <g id="java" transform="translate(164 66)" class="skill-aspiration" data-progress="Aspiration" data-name="Java">
+                        <use href="#hex-unit"/>
+                        <text id="Java" class="hex-skill-text">
+                            Java
+                        </text>
+                    </g>
+                  </svg>                  
+            </section>
+            <section id="physical-skill">
+                <div id="physical-tooltip">
+                    <span id="physical-tooltipSubject"></span>
+                    <span id="physical-tooltipDetails"></span>
+                </div>
+                <br>
+                <svg id="physical" data-subject="Physical" class="physical-skills" width="80%" height="80%" viewBox="0 -5 255 224">
+                    
+                    <def>
+                        <path id="hex-unit" d="M37.5,0,50,20,37.5,40h-25L0,20,12.5,0Z"/>
+                    </def>
+
+                    <g id="hex-main" transform="translate(82 66)" class="skill-main" data-progress="Skill Map" data-name="Physical">
+                        <use href="#hex-unit"/>
+                        <text id="Physical" class="hex-skill-text">
+                            Physical
+                        </text>
+                    </g>
+
+                    <g id="hex-jump" transform="translate(82 22)" class="skill-proficient" data-progress="Proficient" data-name="Jump Rope">
+                        <use href="#hex-unit"/>                    
+                        <text id="Jump_Rope" class="hex-skill-text">
+                            Jump Rope
+                        </text>
+                    </g>
+
+                    <g id="hex-run" transform="translate(41 44)" class="skill-novice" data-progress="Novice" data-name="Running">
+                        <use href="#hex-unit"/>
+                        <text id="Running" class="hex-skill-text">
+                            Running
+                        </text>
+                    </g>
+
+                    <g id="hex-weights" transform="translate(41 88)" class="skill-proficient" data-progress="Proficient" data-name="Weight Lifting">
+                        <use href="#hex-unit"/>
+                        <text id="Weights" class="hex-skill-text">
+                            Weights
+                        </text>
+                    </g>
+
+                    <g id="hex-indoor" transform="translate(82 110)" class="skill-competent" data-progress="Competent" data-name="Indoor Cycling">
+                        <use href="#hex-unit"/>
+                        <text id="Indoor_Cycling" class="hex-skill-text">
+                            Indoor Cycle
+                        </text>
+                    </g>
+
+                    <g id="hex-wing" transform="translate(123 88)" class="skill-proficient" data-progress="Proficient" data-name="Wing Chun">
+                        <use href="#hex-unit"/>
+                        <text id="Wing_Chun" class="hex-skill-text">
+                            Wing Chun
+                        </text>
+                    </g>
+
+                    <g id="hex-swim" transform="translate(123 44)" class="skill-proficient" data-progress="Proficient" data-name="Swimming">
+                        <use href="#hex-unit"/>
+                        <text id="Swimming" class="hex-skill-text">
+                            Swimming
+                        </text>
+                    </g>
+
+                    <g id="hex-cycle" transform="translate(82 154)" class="skill-aspiration" data-progress="aspiration" data-name="Cycling">
+                        <use href="#hex-unit"/>
+                        <text id="Cycling" class="hex-skill-text">
+                            Cycling
+                        </text>
+                    </g>
+
+                    <g id="hex-yiquan" transform="translate(123 132)" class="skill-competent" data-progress="Competent" data-name="Yiquan">
+                        <use href="#hex-unit"/>
+                        <text id="Yiquan" class="hex-skill-text">
+                            Yiquan
+                        </text>
+                    </g>
+
+                    <g id="hex-tai" transform="translate(164 110)" class="skill-competent" data-progress="Competent" data-name="Yang's Tai Chi">
+                        <use href="#hex-unit"/>
+                        <text id="Tai_Chi" class="hex-skill-text">
+                            Tai Chi
+                        </text>
+                    </g>
+                    <g id="hex-akido" transform="translate(164 154)" class="skill-aspiration" data-progress="Aspiration" data-name="Akido">
+                        <use href="#hex-unit"/>
+                        <text id="Akido" class="hex-skill-text">
+                            Akido
+                        </text>
+                    </g>
+
+                    <g id="hex-cal" transform="translate(0 110)" class="skill-competent" data-progress="Competent" data-name="Calisthenics">
+                        <use href="#hex-unit"/>
+                        <text id="Calisthenics" class="hex-skill-text">
+                            Calisthenics
+                        </text>
+                    </g>
+
+                    <g id="hex-hike" transform="translate(0 66)" class="skill-novice" data-progress="Novice" data-name="Hiking">
+                        <use href="#hex-unit"/>
+                        <text id="Hiking" class="hex-skill-text">
+                            Hiking
+                        </text>
+                    </g>
+
+                    <g id="hex-row" transform="translate(123)" class="skill-aspiration" data-progress="Aspiration" data-name="Rowing">
+                        <use href="#hex-unit"/>
+                        <text id="Rowing" class="hex-skill-text">
+                            Rowing
+                        </text>
+                    </g>
+            </svg>
+            </section>
+        </section>
+
+    </section>
+    <section id="art-content" class="hidden">
+        <section>
+            <h3>Artworks</h3>
+            <p>
+                My interests have evolved over the years, having started in a more traditional sense with drawing and painting, then exploring digital art and design. Currently, I am revisiting anatomy drawing while also finding ways to apply my materials training to painting and design projects. I also dabble in graphic design and web development.
+            </p>
+        </section>
+        <section>
+            <small>Thumbnails</small>
+            <br>
+            <div class="gallery">
+                <svg width="100%" height="100%" viewBox="0 0 319 106" style="overflow: visible"> 
+                    
+                    <defs>
+                        <clipPath id="hexagon-clip">
+                            <use href="#hex-unit"/>
+                        </clipPath>                  
+                    </defs>
+
+                    <g class="hex-img" id="Chicken">
+                        <use href="#hex-unit"/>
+                        <image clip-path="url(#hexagon-clip)" xlink:href="fischer_scott_1_thumbnail.jpeg" x="-55" y="-10" width="50%" height="50%" data-caption="Chicken | Oil on Panel"/>
+                    </g>
+                    
+                    <g class="hex-img" id="Chicken-2" transform="translate(0 44)">
+                        <use href="#hex-unit"/>
+                        <image clip-path="url(#hexagon-clip)" xlink:href="Fischer_Scott_2_thumbnail.jpeg" x="-55" y="-10" width="50%" height="50%" data-caption="Chicken | Oil on Panel"/>
+                    </g>
+
+                    <g class="hex-img" id="Choppers" transform="translate(41 22)">
+                        <use href="#hex-unit"/>
+                        <image clip-path="url(#hexagon-clip)" xlink:href="Fischer_Scott_3_thumbnail.jpeg" x="-55" y="-10" width="50%" height="50%" data-caption="Choppers | Acrylic on Paper"/>
+                    </g>
+
+                    <g class="hex-img" id="There" transform="translate(41 66)">
+                        <use href="#hex-unit"/>
+                        <image clip-path="url(#hexagon-clip)" xlink:href="Fischer_Scott_4_thumbnail.jpeg" x="-55" y="-10" width="50%" height="50%" data-caption="There they are! | Oil on Panel"/>
+                    </g>
+
+                    <g class="hex-img" id="Grid-Barf" transform="translate(82)">
+                        <use href="#hex-unit"/>
+                        <image clip-path="url(#hexagon-clip)" xlink:href="fischer_scott_5_thumbnail.jpeg" x="-55" y="-10" width="50%" height="50%" data-caption="Grid Barf | Acrylic on Paper"/>
+                    </g>
+
+                    <g class="hex-img" id="Room" transform="translate(82 44)">
+                        <use href="#hex-unit"/>
+                        <image clip-path="url(#hexagon-clip)" xlink:href="fischer_scott_6_thumbnail.jpeg" x="-55" y="-10" width="50%" height="50%" data-caption="Room | Gouache on Paper"/>
+                    </g>
+
+                    <g class="hex-img" id="Woe" transform="translate(123 22)">
+                        <use href="#hex-unit"/>
+                        <image clip-path="url(#hexagon-clip)" xlink:href="fischer_scott_7_thumbnail.jpeg" x="-55" y="-10" width="50%" height="50%" data-caption="Woe is Me | Watercolor on Paper"/>
+                    </g>
+
+                    <g class="hex-img" id="Wilson" transform="translate(123 66)">
+                        <use href="#hex-unit"/>
+                        <image clip-path="url(#hexagon-clip)" xlink:href="fischer_scott_9_thumbnail.jpeg" x="-55" y="0" width="50%" height="50%" data-caption="Wilson | Oil on Panel"/>
+                    </g>
+
+                    <!-- <g class="hex-img" id="Hexagon-9" transform="translate(164)">
+                        <use href="#hex-unit"/>
+                        <image clip-path="url(#hexagon-clip)" xlink:href="fischer_scott_9_thumbnail.jpeg" x="-55" y="-10" width="50%" height="50%" data-caption="Wilson | Oil on Panel"/>
+                    </g> -->
+
+                    <!-- <g class="hex-img" id="Hexagon-10" transform="translate(164 44)"><use href="#hex-unit"/>
+                    </g>
+                    <g class="hex-img" id="Hexagon-3" transform="translate(205 22)"><use href="#hex-unit"/>
+                    </g>
+                    <g class="hex-img" id="Hexagon-4" transform="translate(205 66)"><use href="#hex-unit"/>
+                    </g>
+                    <g class="hex-img" id="Hexagon-19" transform="translate(246)"><use href="#hex-unit"/>
+                    </g>
+                    <g class="hex-img" id="Hexagon-20" transform="translate(246 44)"><use href="#hex-unit"/>
+                    </g>
+                    <g class="hex-img" id="Hexagon-15" transform="translate(287 22)"><use href="#hex-unit"/>
+                    </g>
+                    <g class="hex-img" id="Hexagon-16" transform="translate(287 66)"><use href="#hex-unit"/>
+                    </g>
+                    <g class="hex-img" id="Hexagon-11" transform="translate(328)"><use href="#hex-unit"/>
+                    </g>
+                    <g class="hex-img" id="Hexagon-12" transform="translate(328 44)"><use href="#hex-unit"/>
+                    </g>
+                    <g class="hex-img" id="Hexagon-5" transform="translate(369 22)"><use href="#hex-unit"/>
+                    </g>
+                    <g class="hex-img" id="Hexagon-6" transform="translate(369 66)"><use href="#hex-unit"/>
+                    </g> -->
+
+                </svg>
+
+                <!-- The Modal -->
+                <div class="modal-overlay" id="imageModal">
+                    <div class="modal">
+                        <img class="modal-content" id="modalImage">
+                        <div id="caption"></div>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+
+    </section>
+    <section id="tbd-content" class="hidden">
+
+        <section>
+            <h3>
+                TBD
+            </h3>
+            <p>
+                I hope to add some fun interactive elements and more artwork samples here in the future. Stay tuned!
+                <ul>
+                    <li>
+                        reading
+                        games
+                        interests
+                        dog
+                        Wife
+                    </li>
+
+                </ul>
+            </p>
+        </section>
+    </section>
+</main>
+
+<!-- Footer -->
+<footer>
+    <div>
+        <a href="#">&uarr;</a>
+    </div>
+    <div>
+        <a href="mailto:scottyfisch@gmail.com">Email</a>
+    </div>
+    <div>
+        <a href="https://www.linkedin.com/in/scott-fischer-4b87a272">LinkedIn</a>
+    </div>
+</footer>
+
+<!-- Scripts -->
+<scripts>
+    <script src="main.js"></script>
+</scripts>
+
+</body>
+
+
+</html>
+

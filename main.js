@@ -66,7 +66,7 @@ document.querySelectorAll('.hex-img').forEach(function(hex) {
         var caption = imgElement.getAttribute('data-caption');
         
         modal.classList.add('active'); // add the active class
-        modalImg.src = imgElement.getAttribute('xlink:href').replace('_thumbnail', '');
+        modalImg.src = imgElement.getAttribute('href').replace('_thumbnail', '');
         
         document.getElementById('caption').innerHTML = caption;
 

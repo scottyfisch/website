@@ -241,7 +241,7 @@ body>footer nav, body>footer {
      |___/|_|          |___/          |_|          |___/  
 */
 
-h1, h2, h3 {
+h1, h2 {
   font-weight: 500;
   margin: var(--spacing-height-s) 0;
   color: var(--color-text-highlight);
@@ -258,6 +258,16 @@ h2 {
 
 h3 {
   margin: 0;
+  font-weight: 500;
+  color: var(--color-text-highlight);
+  font-size: var(--font-header-h3);
+}
+
+h4 {
+  margin: 0;
+  font-weight: 100;
+  color: var(--color-text-link);
+  font-size: var(--font-header-h3);
 }
 
 a {

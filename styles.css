@@ -402,6 +402,10 @@ small + p {
   margin-top: var(--spacing-height-s);
 }
 
+.sublist {
+  margin-bottom: var(--spacing-height-s);
+}
+
 
 /*
  ____  _    _ _ _     

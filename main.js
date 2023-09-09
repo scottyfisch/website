@@ -56,20 +56,6 @@ function toggleVisibility(id) {
 
 
 //////// Gallery /////////
-// Preload images
-const images = document.querySelectorAll('.hex-img image');
-
-images.forEach(image => {
-
-  const fullSize = new Image();
-  fullSize.src = image.getAttribute('href').replace('_thumbnail','');
-
-  fullSize.onload = () => {
-    // Full size loaded 
-  };
-
-});
-
 document.querySelectorAll('.hex-img').forEach(function(hex) {
     hex.addEventListener('click', function() {
         console.log("Image clicked");
@@ -80,15 +66,18 @@ document.querySelectorAll('.hex-img').forEach(function(hex) {
         var caption = imgElement.getAttribute('data-caption');
         
         modal.classList.add('active'); // add the active class
-        modalImg.src = imgElement.getAttribute('href').replace('_thumbnail', '');
-                
-        document.getElementById('caption').innerHTML = caption;
+        var thumbnailSrc = imgElement.getAttribute('href');
+        var fullsizeSrc = thumbnailSrc.replace('_thumbnail', '');
+        modalImg.src = fullsizeSrc;
         
+        document.getElementById('caption').innerHTML = caption;
+
         modal.onclick = function() {
             modal.classList.remove('active');
         }
     });
 });
+
 
 
 //////// Hex and Text Spacing ///////

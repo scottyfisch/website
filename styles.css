@@ -131,6 +131,7 @@ section {
 | | | | | |  __/ | | | |_| |
 |_| |_| |_|\___|_| |_|\__,_|*/
 
+
 nav {
   display:block;
   float: right;
@@ -184,9 +185,7 @@ nav {
   fill:var(--hex-color-nav);
   display:block;
   stroke-width: 0px;
-  
 }
-
 
 
 
@@ -220,16 +219,36 @@ body>header a {
 |  _| (_) | (_) | ||  __/ |   
 |_|  \___/ \___/ \__\___|_| */
 
-body>footer {
+footer {
   font-size: var(--font-size-m);
   line-height: var(--spacing-height-xl);
   justify-content: left;
+  display: flex;
+  /* justify-content: space-between; */
+  align-items: left;
+}
+
+footer div {
+  flex: 0;
+  text-align: left;
+  margin-bottom: -30px;
+}
+
+@media (max-width: 250px) {
+  footer {
+    flex-direction: column;
+    text-align: left;
+    flex: 1;
+  }
 }
 
 body>footer nav, body>footer {
   display: flex;
   gap: var(--spacing-height-m);
 }
+
+
+
 
 
 /*  
@@ -465,7 +484,9 @@ small + p {
 }
 
 .hex-img:hover {
-  filter:opacity(30%);
+  opacity: 0.7;
+  filter: brightness(1.2);
+  transition: opacity 0.3s ease, filter 0.3s ease;
 }
 
 #imageModal {
@@ -524,11 +545,9 @@ small + p {
 | |___| | | | | | | | |_\__ \
 |_____|_|_| |_| |_|_|\__|___/ */
 
-body>header, article>header,
-h1, h2, h3, time,
-p, blockquote, ol, ul, details, pre.code, figcaption,
-.split, .posts, small, body>footer, .gallery, .physical-container, .allskills, .modal,
- #art, #art-skill, #coding-skill, #physical-skill, #fighting-skill, #web-skill, #coding-skill, #physical, .physical, #key, .home-hex-container
+body>header, body>footer, header, h1, h2, h3, time, p, blockquote, ol, ul, details, figcaption, small, 
+#art, #art-skill, #coding-skill, #physical-skill, #fighting-skill, #web-skill, #coding-skill, #physical, #key,
+.split, .posts, .physical, .home-hex-container, .gallery, .physical-container, .allskills, .modal
 {
   max-width: var(--spacing-width-max);
   margin-left: auto;

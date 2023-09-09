@@ -143,7 +143,7 @@ nav {
 
 .hexagon {
   stroke: var(--hex-color-nav);
-  stroke-width: 1px;
+  stroke-width: .5px;
   fill: var(--color-ground);
   overflow: visible;
   transition: transform 0.3s; 
@@ -177,7 +177,7 @@ nav {
 }
 
 .hexagon:hover {
-  stroke-width: 1.5px;
+  stroke-width: .75px;
   /* fill: var(--color-ground); */
 }
 

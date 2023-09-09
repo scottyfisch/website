@@ -55,7 +55,6 @@ function toggleVisibility(id) {
 }
 
 
-//////// Gallery /////////
 document.querySelectorAll('.hex-img').forEach(function(hex) {
     hex.addEventListener('click', function() {
         console.log("Image clicked");
@@ -64,19 +63,27 @@ document.querySelectorAll('.hex-img').forEach(function(hex) {
         var modalImg = document.getElementById('modalImage');
         var imgElement = hex.querySelector('image');
         var caption = imgElement.getAttribute('data-caption');
-        
-        modal.classList.add('active'); // add the active class
+
         var thumbnailSrc = imgElement.getAttribute('href');
         var fullsizeSrc = thumbnailSrc.replace('_thumbnail', '');
-        modalImg.src = fullsizeSrc;
-        
-        document.getElementById('caption').innerHTML = caption;
+
+        // Preload the full-size image
+        var preloadImage = new Image();
+        preloadImage.src = fullsizeSrc;
+        preloadImage.onload = function() {
+            // Set the src attribute for the modal image once the full-size image has been loaded
+            modalImg.src = fullsizeSrc;
+            document.getElementById('caption').innerHTML = caption;
+            modal.classList.add('active'); // add the active class
+        };
 
         modal.onclick = function() {
             modal.classList.remove('active');
-        }
+        };
     });
 });
+
+
 
 
 

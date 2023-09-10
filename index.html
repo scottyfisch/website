@@ -33,12 +33,12 @@
                     <path id="hex-nav" d="M32.25,0,43,17,32.25,34H10.75L0,17,10.75,0Z"/>
                 </def>
 
-                <g class="hexagon" id="homepage" onclick="toggleVisibility('home-content')">
+                <!-- <g class="hexagon" id="homepage" transform="translate(0 76)" onclick="toggleVisibility('home-content')">
                     <use href="#hex-nav"/>
                     <text id="Home" class=hex-nav-text transform="translate(10.5 19.5)">
                         Home
                     </text>
-                </g>
+                </g> -->
 
                 <g class="hexagon" id="art" transform="translate(0 38)" onclick="toggleVisibility('art-content')">
                     <use href="#hex-nav"/>
@@ -54,13 +54,13 @@
                     </text>
                 </g>
 
-                <g class="hexagon" id="tbd" transform="translate(35 57)" onclick="toggleVisibility('tbd-content')">
+                <!-- <g class="hexagon" id="tbd" transform="translate(35 57)" onclick="toggleVisibility('tbd-content')">
                     <use href="#hex-nav"/>
                     <text id="TBD" class=hex-nav-text transform="translate(8 20.5)">
                         Other
                     </text>
-                </g>
-                <g class="hexagon" id="info" transform="translate(0 76)" onclick="toggleVisibility('info-content')">
+                </g> -->
+                <g class="hexagon" id="info" onclick="toggleVisibility('info-content')">
                     <use href="#hex-nav"/>
                     <text class=hex-nav-text id="Info" transform="translate(11 20.5)">
                         Info
@@ -471,9 +471,9 @@
             <h3>Skills</h3>
             <p>
                 As a way to visually track and organize my skills, I started to group them into "maps". 
-                This allows me to see, at a glance, which areas I have more or less experience in and where I would like to go. 
-                Designing this was also a technical exercise in using HTML, CSS and Javascript to build something visually interesting and interactive. 
-                The maps are still a work in progress, but at present here are two related to art and coding. 
+                This allows me to see at a glance, which areas I have more or less experience in and where I would like to go. 
+                Designing this was also a technical exercise in HTML, CSS and JavaScript to build something visually interesting and interactive. 
+                The maps are still a work in progress, but at present here are two snippets related to art and coding. 
             </p>
             <!-- <br>
             <div id="key">
@@ -648,7 +648,7 @@
                         <path id="hex-unit" d="M37.5,0,50,20,37.5,40h-25L0,20,12.5,0Z"/>
                     </def>
 
-                    <g id="sql" transform="translate(0 66)" class="skill-novice" data-progress="novice" data-name="SQL">
+                    <g id="sql" transform="translate(0 66)" class="skill-novice" data-progress="Novice" data-name="SQL">
                         <use href="#hex-unit"/>
                         <text id="SQL" class="hex-skill-text">
                             SQL
@@ -877,7 +877,7 @@
                         <path id="hex-unit" d="M37.5,0,50,20,37.5,40h-25L0,20,12.5,0Z"/>
                     </def>
 
-                    <g id="hex-main" transform="translate(82 66)" class="skill-main" data-progress="Skill Map" data-name="Physical">
+                    <g id="hex-main" transform="translate(82 66)" class="skill-main" data-progress="" data-name="Skill Map">
                         <use href="#hex-unit"/>
                         <text id="Physical" class="hex-skill-text">
                             Physical
@@ -926,7 +926,7 @@
                         </text>
                     </g>
 
-                    <g id="hex-cycle" transform="translate(82 154)" class="skill-aspiration" data-progress="aspiration" data-name="Cycling">
+                    <g id="hex-cycle" transform="translate(82 154)" class="skill-aspiration" data-progress="Aspiration" data-name="Cycling">
                         <use href="#hex-unit"/>
                         <text id="Cycling" class="hex-skill-text">
                             Cycling

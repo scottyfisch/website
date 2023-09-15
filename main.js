@@ -44,7 +44,7 @@ function toggleVisibility(id) {
         if (!isClickedSectionVisible) {
             // If the clicked section was already visible, just show the home section
             homeContent.classList.remove('hidden-home');
-            homeContent.classList.remove('hidden'); // Just to be sure it's not hidden
+            homeContent.classList.remove('hidden');
         } else {
             // If the clicked section was not visible, display it
             clickedSection.classList.remove('hidden');

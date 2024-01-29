@@ -25,7 +25,7 @@ __     __         _       _     _
   --font-size-hex: .37rem;
   --font-size-xs: .55rem;
   --font-size-s: .8rem;
-  --font-size-m: 1.2rem;
+  --font-size-m: 1rem;
   --font-size-l: 1.5rem;
   --font-height: 1.5;
   --font-header-h1: 1.25rem; /*size*/
@@ -60,6 +60,10 @@ __     __         _       _     _
   --spacing-width-max: 38rem;
   --spacing-width-min: 15rem;
   --spacing-width-xl: 50rem;
+
+
+/*Animations*/
+/* --text-animation-speed: 1.0s; */
 }
 
 
@@ -172,9 +176,10 @@ nav {
 }
 
 .hex-nav-text {
-  /* fill:var(--hex-color-nav); */
+  fill:var(--hex-color-nav);
   font-size:var(--font-size-xs);
-  display:none;
+  /* display:none; */
+  stroke-width: .0px;
 }
 
 .hexagon:hover {

@@ -11,8 +11,8 @@ document.addEventListener("DOMContentLoaded", function() {
         section.classList.add('hidden');
     });
 
-    // Show only the home content
-    var homeContent = document.getElementById('home-content');
+    // Show only the home content, changed to info content until home is developed.
+    var homeContent = document.getElementById('info-content');
     homeContent.classList.remove('hidden', 'hidden-home');
 });
 
@@ -30,9 +30,9 @@ function toggleVisibility(id) {
         section.classList.add('hidden');
     });
 
-    var homeContent = document.getElementById('home-content');
+    var homeContent = document.getElementById('info-content');
 
-    if (id === 'home-content') {
+    if (id === 'info-content') {
         if(isClickedSectionVisible) {
             // If home content was hidden, show it
             homeContent.classList.remove('hidden', 'hidden-home');

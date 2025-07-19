@@ -10,15 +10,26 @@ __     __         _       _     _
 :root {
   /* Color */
   /* --color-ground: #eeede3; Background */
-  --color-ground: #faf9f6; /* Background */
-  --color-accent: #6b4e3d; /* Warm brown for accents */
-  --color-text-base: 0,0,0; /* Default Text, no direct Links */
-  --color-text-link: #222; /* Links */
-  --color-text-highlight: #882020;
-  --color-text-opacity-full: rgb(var(--color-text-base),1); /* Full Opacity */
-  --color-text-opacity-mid: rgb(var(--color-text-base),.5); /* Dimmed text */
-  --color-text-opacity-low: rgb(var(--color-text-base),.2); /* Dimmed text */
-  --color-heading: #882020;
+  /* --color-ground: #faf9f6; /* Background */
+  /* --color-accent: #6b4e3d; Warm brown for accents */
+  /* --color-text-base: 0,0,0; Default Text, no direct Links */
+  /* --color-text-link: #222; Links */
+  /* --color-text-highlight: #882020; */
+  /* --color-text-opacity-full: rgb(var(--color-text-base),1); Full Opacity */
+  /* --color-text-opacity-mid: rgb(var(--color-text-base),.5); Dimmed text */
+  /* --color-text-opacity-low: rgb(var(--color-text-base),.2); Dimmed text */
+  /* --color-heading: #882020; */
+  
+  /* Darker Theme */
+  --color-ground: #000000; /* Soft dark, not harsh black */
+  --color-accent: #6e6d6d; /* Muted brown, similar to your original */
+  --color-text-base: 220,215,210; /* Warm off-white, not pure white */
+  --color-text-link: #c5c5c5; /* Just slightly lighter than text */
+  --color-text-highlight: #ffffff; /* Subtle warm brown - barely different */
+  --color-text-opacity-full: rgb(var(--color-text-base),1);
+  --color-text-opacity-mid: rgb(var(--color-text-base),.65);
+  --color-text-opacity-low: rgb(var(--color-text-base),.35);
+  --color-heading: #a6a6a6; /* Very subtle difference from body text */
 
   
   /* Fonts */
@@ -450,7 +461,7 @@ details > summary::before {
   top: 0.7em;
   font-size: 1em;
   font-weight: bold;
-  color: #882020;
+  color: var(--color-accent);
   transition: transform 0.2s ease;
   transform-origin: center;
   line-height: 1;

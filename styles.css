@@ -412,22 +412,48 @@ details > summary {
   cursor: pointer;
   position: relative;
   padding-left: 1.5em;
+  display: block;
+  /* Mobile-specific overrides */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: none;
+  border: none;
+  outline: none;
 }
 
 /* Remove webkit default triangle */
 details > summary::-webkit-details-marker {
-  display: none;
+  display: none !important;
+  content: "" !important;
+}
+
+summary::-moz-details-marker {
+  display: none !important;
+  content: "" !important;
+}
+
+summary::marker {
+  display: none !important;
+  content: "" !important;
+}
+
+summary::-webkit-list-button {
+  display: none !important;
 }
 
 /* Add custom triangle */
 details > summary::before {
-  content: "▶";
+  content: "›"; /* Right angle bracket - more reliable than triangles */
   position: absolute;
   left: 0;
-  top: 1.3em;
-  font-size: 0.7em;
-  color: rgba(0,0,0,0.5);
+  top: 0.7em;
+  font-size: 1em;
+  font-weight: bold;
+  color: #882020;
   transition: transform 0.2s ease;
+  transform-origin: center;
+  line-height: 1;
   width: 1em;
   height: 1em;
   display: flex;

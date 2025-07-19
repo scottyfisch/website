@@ -10,26 +10,28 @@ __     __         _       _     _
 :root {
   /* Color */
   /* --color-ground: #eeede3; Background */
-  /* --color-ground: #faf9f6; /* Background */
-  /* --color-accent: #6b4e3d; Warm brown for accents */
-  /* --color-text-base: 0,0,0; Default Text, no direct Links */
-  /* --color-text-link: #222; Links */
-  /* --color-text-highlight: #882020; */
-  /* --color-text-opacity-full: rgb(var(--color-text-base),1); Full Opacity */
-  /* --color-text-opacity-mid: rgb(var(--color-text-base),.5); Dimmed text */
-  /* --color-text-opacity-low: rgb(var(--color-text-base),.2); Dimmed text */
-  /* --color-heading: #882020; */
+  /* --color-ground: #faf9f6;
+  --color-accent: #6b4e3d; */
+  /* Default Text  */
+  /* --color-text-base: 0,0,0;
+  --color-text-link: #222;
+  --color-text-highlight: #882020;
+  --color-text-opacity-full: rgb(var(--color-text-base),1);
+  --color-text-opacity-mid: rgb(var(--color-text-base),.5);
+  --color-text-opacity-low: rgb(var(--color-text-base),.2);
+  --color-heading: #882020; */
   
-  /* Darker Theme */
-  --color-ground: #000000; /* Soft dark, not harsh black */
-  --color-accent: #6e6d6d; /* Muted brown, similar to your original */
-  --color-text-base: 220,215,210; /* Warm off-white, not pure white */
-  --color-text-link: #c5c5c5; /* Just slightly lighter than text */
-  --color-text-highlight: #ffffff; /* Subtle warm brown - barely different */
+  /* Dark Theme */
+  --color-ground: #21201f;
+  --color-accent: #6e6d6d; 
+  --color-text-base: 220,215,210; 
+  --color-text-link: #db8181; 
+  --color-text-highlight: #ffffff; 
   --color-text-opacity-full: rgb(var(--color-text-base),1);
   --color-text-opacity-mid: rgb(var(--color-text-base),.65);
   --color-text-opacity-low: rgb(var(--color-text-base),.35);
-  --color-heading: #a6a6a6; /* Very subtle difference from body text */
+  --color-text-opacity-extra-low: rgb(var(--color-text-base),.15);
+  --color-heading: #a6a6a6; 
 
   
   /* Fonts */
@@ -46,18 +48,6 @@ __     __         _       _     _
   --font-header-h2: 1.125rem;
   --font-header-h3: 1rem;
   --font-header-h4: 0.9rem;
-
-  /* Hexagons */
-  --hex-color-nav: #ab4343;
-  --hex-skill-color-unit: 0,0,0;
-  --hex-skill-color-main: rgb(var(--hex-skill-color-unit));
-  --hex-skill-color-high: rgb(var(--hex-skill-color-unit),.3);
-  --hex-skill-color-mid: rgb(var(--hex-skill-color-unit),.1);
-  --hex-skill-color-low: rgb(var(--hex-skill-color-unit),.07);
-  --hex-skill-color-lowest: rgb(var(--hex-skill-color-unit),.03);
-  --hex-blank: rgb(var(--hex-skill-color-unit),.3);
-  --hex-height: 50px;
-  --hex-width: 40px;
 
 
   /* Spacing */
@@ -151,63 +141,6 @@ section {
 | '_ ` _ \ / _ \ '_ \| | | |
 | | | | | |  __/ | | | |_| |
 |_| |_| |_|\___|_| |_|\__,_|*/
-
-
-nav {
-  display:block;
-  float: right;
-}
-
-.svg-container {
-  position: relative;
-}
-
-.hexagon {
-  stroke: var(--hex-color-nav);
-  stroke-width: .5px;
-  fill: var(--color-ground);
-  overflow: visible;
-  transition: transform 0.3s; 
-}
-
-.hidden {
-  visibility: hidden;
-  position: absolute;
-  pointer-events: none;
-  /* opacity: 0; */
-  /* display: none; */
-  top: 0;
-  left: 0;
-  height: 0;
-  overflow: hidden;
-}
-
-.hidden-home {
-  display: none;
-}
-
-#home-content {
-  visibility: visible;
-  position: static;
-}
-
-.hex-nav-text {
-  fill:var(--hex-color-nav);
-  font-size:var(--font-size-xs);
-  /* display:none; */
-  stroke-width: .0px;
-}
-
-.hexagon:hover {
-  stroke-width: .75px;
-  /* fill: var(--color-ground); */
-}
-
-.hexagon:hover .hex-nav-text {
-  fill:var(--hex-color-nav);
-  display:block;
-  stroke-width: 0px;
-}
 
 
 
@@ -396,17 +329,12 @@ time {
   font-feature-settings: 'tnum' 1;
 }
 
-/* details[open] > summary:first-of-type {
-  list-style-type: disclosure-open;
-} */
-
-/* details > summary:first-of-type {
-  list-style: inside disclosure-closed;
-} */
-
-/* details {
-  margin-bottom: var(--spacing-height-s);
-} */
+.impact {
+  font-style: italic;
+  color: var(--color-text-opacity-mid);
+  font-size: 0.9em;
+  margin-top: 0.3em;
+}
 
 details summary {
   padding: 0.5em 0; /* More breathing room for summary text */
@@ -489,6 +417,7 @@ details summary:hover {
 /* link styling */
 a {
   transition: all 0.2s ease;
+  color: var(--color-text-link)
 }
 
 a:hover {
@@ -553,8 +482,8 @@ small + p {
 
 /* Subtle section separators */
 section {
-  border-bottom: 1px solid rgba(0,0,0,0.05);
-  padding-bottom: var(--spacing-height-xl);
+  border-bottom: .5px solid var(--color-text-opacity-extra-low);
+  padding-bottom: var(--spacing-height-l);
 }
 
 section:last-child {
@@ -654,6 +583,9 @@ section:last-child {
   max-height: 80%;
   margin: auto;
   display: block;
+  min-height: 200px; /* Prevents tiny initial size */
+  object-fit: contain; /* Maintains aspect ratio */
+  background: rgba(255,255,255,0.1); /* Subtle placeholder while loading */
 }
 
 #caption {

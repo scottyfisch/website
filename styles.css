@@ -424,10 +424,15 @@ details > summary::before {
   content: "▶";
   position: absolute;
   left: 0;
-  top: 0.8em;
-  font-size: 0.8em;
-  color: var(--color-text-opacity-mid);
+  top: 1.3em;
+  font-size: 0.7em;
+  color: rgba(0,0,0,0.5);
   transition: transform 0.2s ease;
+  width: 1em;
+  height: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* Rotate when open */
@@ -463,13 +468,6 @@ a:hover {
 */
 
 
-/*
- _____ ____  ____  
-|_   _| __ )|  _ \ 
-  | | |  _ \| | | |
-  | | | |_) | |_| |
-  |_| |____/|____/
-*/
 
 /*
  ___        __       
@@ -557,59 +555,6 @@ section:last-child {
   line-height: 1.4;
 }
 
-/* Old Hex Stuff */
-
-.hex-blank {
-  stroke: var(--hex-skill-color-main);
-  stroke-width: .1px;
-  fill: var(--color-ground);
-}
-
-.skill-main {
-  /* stroke: var(--hex-color-nav); */
-  stroke-width: 1px;
-  fill: var(--color-ground);
-}
-
-.skill-proficient {
-  stroke: var(--hex-skill-color-main);
-  stroke-width: .5px;
-  fill: var(--color-ground);
-}
-
-.skill-competent {
-  stroke: var(--hex-skill-color-main);
-  stroke-width: .5px;
-  fill: var(--hex-skill-color-low);
-}
-
-.skill-novice {
-  stroke: var(--hex-skill-color-main);
-  stroke-width: .5px;
-  stroke-dasharray: 2;
-  fill: var(--hex-skill-color-lowest);
-}
-
-.skill-aspiration {
-  stroke: var(--hex-skill-color-main);
-  stroke-width: .5px;
-  stroke-dasharray: 2;
-  fill: var(--color-ground);
-}
-
-.skill-proficient:hover,
-.skill-competent:hover,
-.skill-novice:hover,
-.skill-aspiration:hover {
-  stroke: var(--hex-color-nav);
-  stroke-width: 1px;
-}
-
-.hex-skill-text {
-  fill: var(--color-text-opacity-full);
-  font-size: var(--font-size-hex);
-  stroke-width: 0px;
-}
 
 
 /*  _         _   
@@ -623,7 +568,7 @@ section:last-child {
   overflow: clip;
 } */
 
-.hex-img {
+/* .hex-img {
   stroke: var(--color-text-link);
   stroke-width: .2px;
   fill: var(--color-ground);
@@ -635,7 +580,7 @@ section:last-child {
   opacity: 0.7;
   filter: brightness(1.2);
   transition: opacity 0.3s ease, filter 0.3s ease;
-}
+} */
 
 #imageModal {
   display: none;

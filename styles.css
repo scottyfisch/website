@@ -25,7 +25,7 @@ __     __         _       _     _
   --color-ground: #21201f;
   --color-accent: #6e6d6d; 
   --color-text-base: 220,215,210; 
-  --color-text-link: #db8181; 
+  --color-text-link: #ffffff; 
   --color-text-highlight: #ffffff; 
   --color-text-opacity-full: rgb(var(--color-text-base),1);
   --color-text-opacity-mid: rgb(var(--color-text-base),.65);
@@ -36,7 +36,7 @@ __     __         _       _     _
   
   /* Fonts */
   --font-family: "DejaVu Serif", "Georgia", "Times New Roman", serif;
-  --font-family-mono: "DejaVu Sans Mono", "Courier", monospace; /* Keep monospace for code if needed */
+  --font-family-mono: "SF Mono", "Monaco", "Inconsolata", "Roboto Mono", "Source Code Pro", monospace;
   --font-size: 1rem;
   --font-size-hex: .37rem;
   --font-size-xs: .55rem;
@@ -259,12 +259,12 @@ h4 {
   /* margin: 0; */
   /* font-weight: 100; */
   font-weight: 500;
-  color: var(--color-text-link);
+  color: var(--color-text-base);
   font-size: var(--font-header-h3);
   margin: var(--spacing-height-s) 0 0.3em 0;
 }
 
-a {
+/* a {
   color: var(--color-text-link);
   text-decoration-color: var(--color-text-opacity-mid);
   text-decoration-thickness: 0.5px;
@@ -274,6 +274,21 @@ a {
 a:hover {
   transition: color 0.2s ease-in;
   color: var(--color-text-highlight);
+} */
+
+/* link styling */
+a {
+  transition: all 0.5s ease;
+  color: var(--color-text-link);
+  text-decoration-color: var(--color-text-link);
+  text-decoration-thickness: 0.5px;
+  text-underline-offset: 0.1em;
+}
+
+a:hover {
+  color: var(--color-text-opacity-mid);
+  text-decoration-color: var(--color-text-opacity-low);
+  text-decoration-thickness: 1px;
 }
 
 h3 a {
@@ -290,16 +305,6 @@ p, ol, ul {
   font-feature-settings: 'onum' 1;
 }
 
-/* figure {
-  max-width: var(--spacing-width-max);
-} */
-
-/* figcaption {
-  text-align: left;
-  margin-top: var(--spacing-s);
-  color: var(--color-dim);
-  font-size: var(--font-size-s);
-} */
 
 small {
   font-size: var(--font-size);
@@ -308,7 +313,7 @@ small {
   display: block;
 }
 
-small a {
+/* small a {
   color: var(--color-text-highlight);
   text-decoration-color: var(--color-text-opacity-mid);
   text-underline-offset: 0.1em;
@@ -318,7 +323,27 @@ small a:hover {
   text-decoration-color: var(--color-text-highlight);
   text-decoration-thickness: 1.15px;
   /* text-decoration: underline; */
+/* } */
+
+.contact-links {
+  color: var(--color-text-opacity-mid);
 }
+
+.contact-links a {
+  transition: all 0.5s ease;
+  color: var(--color-text-link);
+  text-decoration-color: var(--color-text-link);
+  text-decoration-thickness: 0.5px;
+  text-underline-offset: 0.1em;
+  margin-right: 1rem;
+}
+
+.contact-links a:hover {
+  color: var(--color-text-opacity-mid);
+  text-decoration-color: var(--color-text-opacity-low);
+  text-decoration-thickness: 1px;
+}
+
 
 .label, time {
   color: var(--color-text-opacity-mid);
@@ -347,6 +372,8 @@ details[open] summary {
 
 /* Hide the default triangle */
 details > summary {
+  font-size: var(--font-header-h2);
+  color: var(--color-text-highlight);
   list-style: none;
   cursor: pointer;
   position: relative;
@@ -414,14 +441,83 @@ details summary:hover {
   color: var(--color-accent);
 }
 
-/* link styling */
-a {
-  transition: all 0.2s ease;
-  color: var(--color-text-link)
+
+
+
+/* UNIVERSAL TAG/BUTTON SYSTEM */
+.tag-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
 }
 
-a:hover {
-  text-decoration-thickness: 1px;
+.tag-category {
+  margin-bottom: var(--spacing-height-m);
+}
+
+.tag-category h4 {
+  margin: 0 0 0.5em 0;
+  font-size: 1rem;
+  color: var(--color-text-highlight);
+  font-weight: 500;
+  font-family: var(--font-family);
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  font-size: var(--font-size-s);
+}
+
+.tag {
+  /* Base styles - shared by all variants */
+  background: transparent;
+  border: 1px solid var(--color-text-opacity-low);
+  color: var(--color-text-opacity-full);
+  padding: 0.3rem 0.6rem;
+  border-radius: 6px;
+  font-family: var(--font-family-mono);
+  font-size: var(--font-size-s);
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+  /* margin-right: 0.5rem;
+  margin-bottom: 0.5rem; */
+  cursor: pointer;
+}
+
+/* Hover state for base tag */
+.tag:hover {
+  border-color: var(--color-text-opacity-mid);
+  color: var(--color-text-highlight);
+}
+
+/* PRIMARY VARIANT - for main CTAs like Resume */
+.tag.primary {
+  background: var(--color-text-opacity-extra-low);
+  border: 1px solid transparent;
+  color: var(--color-text-opacity-full);
+}
+
+.tag.primary:hover {
+  background: var(--color-text-opacity-low);
+  color: var(--color-text-highlight);
+}
+
+/* SKILL VARIANT - for technical skills (same as base, but specific class for clarity) */
+.tag.skill {
+  /* Inherits base .tag styles */
+  font-family: var(--font-family);
+  font-size: var(--font-size-s);
+}
+
+.tag.primary.soft {
+  font-family: var(--font-family);
+  font-size: var(--font-size-s);
+}
+
+/* CONTACT VARIANT - if you want slightly different styling for contact links */
+.tag.contact {
+  /* Could add specific styling here if needed */
 }
 
 
@@ -443,6 +539,9 @@ a:hover {
 |___|_| |_|_|  \___/ 
 */
 
+
+
+/* Formatting */
 
 .split {
   margin-bottom: var(--spacing-height-l);
@@ -500,7 +599,7 @@ section:last-child {
 
 
 /* Technical Skills Grid */
-.skills-grid {
+/* .skills-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: var(--spacing-height-m);
@@ -512,14 +611,82 @@ section:last-child {
   font-size: var(--font-size-m);
   color: var(--color-text-highlight);
   font-weight: 500;
-  /* text-transform: uppercase; */
   letter-spacing: 0.5px;
 }
 
 .skill-list {
   color: var(--color-text-opacity-full);
   line-height: 1.4;
+} */
+
+/* New Skills Grid with Shapes */
+/* .skills-section {
+  margin-bottom: var(--spacing-height-l);
 }
+
+.skill-category {
+  margin-bottom: var(--spacing-height-m);
+}
+
+.skill-category h4 {
+  margin: 0 0 0.5em 0;
+  font-size: 1rem;
+  color: var(--color-text-highlight);
+  font-weight: 500;
+  font-family: var(--font-family-mono);
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+}
+
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.skill-tag {
+  background: transparent;
+  border: 1px solid var(--color-text-opacity-low);
+  color: var(--color-text-opacity-full);
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  font-family: var(--font-family-mono);
+  font-size: 0.85rem;
+  font-weight: 400;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.skill-tag:hover {
+  border-color: var(--color-text-link);
+  color: var(--color-text-highlight);
+  background: rgba(219, 129, 129, 0.05);
+}
+
+/* Alternative solid background version */
+/* .skill-tag.solid {
+  background: var(--color-text-opacity-extra-low);
+  border: 1px solid transparent;
+  color: var(--color-text-opacity-full);
+}
+
+.skill-tag.solid:hover {
+  background: var(--color-text-opacity-low);
+  color: var(--color-text-highlight);
+} */
+
+/* Data label style for section headers */
+/* .data-label {
+  font-family: var(--font-family-mono);
+  color: var(--color-text-opacity-mid);
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+  display: block;
+} */
 
 
 

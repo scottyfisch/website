@@ -453,6 +453,7 @@ details summary:hover {
 }
 
 .tag-category {
+  margin-top: var(--spacing-height-m);
   margin-bottom: var(--spacing-height-m);
 }
 

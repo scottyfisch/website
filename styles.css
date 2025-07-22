@@ -25,7 +25,7 @@ __     __         _       _     _
   --color-ground: #21201f;
   --color-accent: #6e6d6d; 
   --color-text-base: 220,215,210; 
-  --color-text-link: #ffffff; 
+  --color-text-link: #d5d2d2; 
   --color-text-highlight: #ffffff; 
   --color-text-opacity-full: rgb(var(--color-text-base),1);
   --color-text-opacity-mid: rgb(var(--color-text-base),.65);
@@ -357,7 +357,7 @@ time {
 .impact {
   font-style: italic;
   color: var(--color-text-opacity-mid);
-  font-size: 0.9em;
+  font-size: var(--font-size-m);
   margin-top: 0.3em;
 }
 

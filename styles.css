@@ -129,6 +129,11 @@ section {
   margin-bottom: var(--spacing-height-xl);
 }
 
+@media (min-width: 1024px) {
+  :root {
+    --spacing-width-max: 48rem;
+  }
+}
 
 /* 
  _   _             _             _   _             

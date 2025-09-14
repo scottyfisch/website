@@ -22,8 +22,9 @@ __     __         _       _     _
   --color-heading: #882020; */
   
   /* Dark Theme */
-  --color-ground: #21201f;
-  --color-accent: #6e6d6d; 
+  /* --color-ground: #21211f; */
+  --color-ground: #2e2005;
+  --color-accent: #6e6e6d; 
   --color-text-base: 220,215,210; 
   --color-text-link: #d5d2d2; 
   --color-text-highlight: #ffffff; 

@@ -323,6 +323,13 @@ ul ul, ol ol, ul ol, ol ul {
   margin-left: 1.5em;
 }
 
+li {
+  margin-bottom: var(--spacing-height-s);
+}
+
+li:last-child {
+  margin-bottom: 0;
+}
 
 small {
   font-size: var(--font-size);

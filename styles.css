@@ -10,20 +10,20 @@ __     __         _       _     _
 :root {
   /* Color */
   /* --color-ground: #eeede3; Background */
-  /* --color-ground: #faf9f6;
-  --color-accent: #6b4e3d; */
+  --color-ground: #faf9f6;
+  --color-accent: #6b4e3d;
   /* Default Text  */
-  /* --color-text-base: 0,0,0;
+  --color-text-base: 0,0,0;
   --color-text-link: #222;
   --color-text-highlight: #882020;
   --color-text-opacity-full: rgb(var(--color-text-base),1);
   --color-text-opacity-mid: rgb(var(--color-text-base),.5);
   --color-text-opacity-low: rgb(var(--color-text-base),.2);
-  --color-heading: #882020; */
+  --color-text-opacity-extra-low: rgb(var(--color-text-base),.05);
+  --color-heading: #882020;
   
   /* Dark Theme */
-  --color-ground: #21211f;
-  /* --color-ground: #1f130f; */
+  /* --color-ground: #21211f;
   --color-accent: #6e6e6d; 
   --color-text-base: 220,215,210; 
   --color-text-link: #d5d2d2; 
@@ -32,7 +32,7 @@ __     __         _       _     _
   --color-text-opacity-mid: rgb(var(--color-text-base),.65);
   --color-text-opacity-low: rgb(var(--color-text-base),.35);
   --color-text-opacity-extra-low: rgb(var(--color-text-base),.15);
-  --color-heading: #a6a6a6; 
+  --color-heading: #a6a6a6;  */
 
   
   /* Fonts */
@@ -309,6 +309,18 @@ p, ol, ul {
   margin: 1em 0;
   font-size: var(--font-size);
   font-feature-settings: 'onum' 1;
+}
+
+/* Remove default list indentation */
+ul, ol {
+  padding-left: 0;
+  list-style-position: outside;
+  margin-left: 1.2em; /* Just enough space for the bullet */
+}
+
+/* For nested lists (if you have any) */
+ul ul, ol ol, ul ol, ol ul {
+  margin-left: 1.5em;
 }
 
 
@@ -722,16 +734,18 @@ section:last-child {
   transition: opacity 0.3s ease, filter 0.3s ease;
 } */
 
+/* UPDATED MODAL STYLES WITH DRAG-TO-PAN */
 #imageModal {
   display: none;
   position: fixed;
-  z-index: 1;
+  z-index: 1000;
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.85);
   opacity: 0;
+  transition: opacity 0.3s ease;
 }
 
 #imageModal.active {
@@ -739,37 +753,144 @@ section:last-child {
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 2rem;
 }
 
 .modal {
   display: flex;
   flex-direction: column;
-  max-width: var(--spacing-width-max);
-  /* max-height: 80%; */
-  /* background-color: white; */
-  overflow: hidden;
+  align-items: center;
+  gap: 1rem;
+  max-width: 95vw;
+  max-height: 95vh;
+}
+
+/* Image container - FIXED viewport size, doesn't clip */
+.modal-image-container {
+  position: relative;
+  display: flex;
   align-items: center;
   justify-content: center;
+  width: 90vw;
+  height: 75vh;
+  overflow: visible;
+  cursor: grab;
+  pointer-events: none; /* Allow clicks to pass through to modal background */
+}
+
+.modal-image-container.dragging {
+  cursor: grabbing;
 }
 
 .modal-content {
-  max-width: 80%;
-  max-height: 80%;
-  margin: auto;
   display: block;
-  min-height: 200px; /* Prevents tiny initial size */
-  object-fit: contain; /* Maintains aspect ratio */
-  background: rgba(255,255,255,0.1); /* Subtle placeholder while loading */
+  max-width: 100%;
+  max-height: 75vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  transition: transform 0.1s ease-out;
+  transform-origin: center center;
+  user-select: none;
+  -webkit-user-drag: none;
+  pointer-events: auto; /* Re-enable pointer events on the image itself */
+}
+
+/* Close button - always visible in top right */
+.modal-close {
+  position: fixed;
+  top: 2rem;
+  right: 2rem;
+  width: 40px;
+  height: 40px;
+  background: rgba(0,0,0,0.7);
+  border: 1px solid rgba(255,255,255,0.3);
+  border-radius: 50%;
+  color: #fff;
+  font-size: 24px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1001;
+  transition: all 0.2s ease;
+  line-height: 1;
+  padding: 0;
+}
+
+.modal-close:hover {
+  background: rgba(255,255,255,0.2);
+  border-color: rgba(255,255,255,0.5);
+  transform: scale(1.1);
+}
+
+/* Zoom controls - FIXED position (always visible) */
+.zoom-controls {
+  position: fixed;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 0.5rem;
+  background: rgba(0,0,0,0.7);
+  padding: 0.5rem;
+  border-radius: 4px;
+  align-items: center;
+  z-index: 1001;
+  border: 1px solid rgba(255,255,255,0.2);
+}
+
+.zoom-btn {
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.3);
+  color: #fff;
+  width: 32px;
+  height: 32px;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: bold;
+  transition: all 0.2s ease;
+  user-select: none;
+}
+
+.zoom-btn:hover {
+  background: rgba(255,255,255,0.2);
+  border-color: rgba(255,255,255,0.5);
+}
+
+.zoom-btn:active {
+  background: rgba(255,255,255,0.3);
+}
+
+.zoom-btn:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.zoom-level {
+  color: #ccc;
+  font-size: 14px;
+  padding: 0 0.5rem;
+  display: flex;
+  align-items: center;
+  min-width: 50px;
+  justify-content: center;
+  font-family: var(--font-family-mono);
 }
 
 #caption {
   display: block;
-  max-width: var(--spacing-width-max);
+  max-width: 90vw;
   text-align: center;
   color: #ccc;
-  padding: 10px 0;
-  /* height: 0px; */
-  overflow: auto;
+  padding: 0.5rem 1rem;
+  background: rgba(0,0,0,0.3);
+  border-radius: 4px;
+  line-height: 1.4;
 }
 
 .simple-gallery {

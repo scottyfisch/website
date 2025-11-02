@@ -10,20 +10,20 @@ __     __         _       _     _
 :root {
   /* Color */
   /* --color-ground: #eeede3; Background */
-  --color-ground: #faf9f6;
-  --color-accent: #6b4e3d;
+  /* --color-ground: #faf9f6;
+  --color-accent: #6b4e3d; */
   /* Default Text  */
-  --color-text-base: 0,0,0;
+  /* --color-text-base: 0,0,0;
   --color-text-link: #222;
   --color-text-highlight: #882020;
   --color-text-opacity-full: rgb(var(--color-text-base),1);
   --color-text-opacity-mid: rgb(var(--color-text-base),.5);
   --color-text-opacity-low: rgb(var(--color-text-base),.2);
   --color-text-opacity-extra-low: rgb(var(--color-text-base),.05);
-  --color-heading: #882020;
+  --color-heading: #882020; */
   
   /* Dark Theme */
-  /* --color-ground: #21211f;
+  --color-ground: #21211f;
   --color-accent: #6e6e6d; 
   --color-text-base: 220,215,210; 
   --color-text-link: #d5d2d2; 
@@ -32,7 +32,7 @@ __     __         _       _     _
   --color-text-opacity-mid: rgb(var(--color-text-base),.65);
   --color-text-opacity-low: rgb(var(--color-text-base),.35);
   --color-text-opacity-extra-low: rgb(var(--color-text-base),.15);
-  --color-heading: #a6a6a6;  */
+  --color-heading: #a6a6a6; 
 
   
   /* Fonts */
